@@ -31,6 +31,7 @@ void head(int w ){
         for(int j=0 ; j<i ; j++){
             Console.Write("/");
         }
+        Console.Write("|");
         for(int j=0 ; j<i ; j++){
             Console.Write("\\");
         }
@@ -72,4 +73,4 @@ void rocketship(int n , int w , int h){
     head(w);
 }
 
-rocketship(2,7,7);
+rocketship(4,7,7);
