@@ -18,7 +18,7 @@ class Student{
     }
 
     void get_courses(char* course,int n){
-        strncpy(lesson[n], course,sizeof(lesson[n]-1));
+        strncpy(lesson[n], course,sizeof(lesson[n])-1);
     }
 
     void listing(int courses){
@@ -47,7 +47,7 @@ int main(){
     while (true)
     {
         cout<< "lesson?";
-        cin >> input;
+        cin>> input;
         if(*input == 'A') break;
         Mobina.get_courses(input,i);
         cout << "credits?";

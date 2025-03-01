@@ -1,4 +1,4 @@
-﻿namespace stats;
+﻿dnamespace stats;
 
 class Program
 {
