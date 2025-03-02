@@ -74,9 +74,47 @@ public:
     }
 
     void pop(int index){
-        for (int i = m_len; i >index - 1; i--)
+        for (int i = index+1; i <m_len; i++)
         {
             m_lst[i-1] = m_lst[i];
+        }
+        resize(m_len - 1);
+    }
+
+    void remove(T value){
+    
+        for (int i = 0; i < m_len; i++)
+        {
+            if(value == m_lst[i])
+            pop(i);
+        }
+        
+    }
+
+    void reverse(){
+        for (int i = 0; i < m_len/2; i++)
+        {
+            T temp=m_lst[i];
+            m_lst[i] = m_lst[m_len - 1 - i];
+            m_lst[m_len - 1 - i ] = temp;
+        }
+        
+    }
+
+    void sort(){
+        for (int i = m_len - 1; i >=0; i--)
+        {
+            bool swapped = false;
+            for (int j = 0; j < i; j++)
+            {
+                if(m_lst[j+1] < m_lst[j]){
+                    T temp=m_lst[j];
+                    m_lst[j] = m_lst[j + 1];
+                    m_lst[j+ 1] =temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) break;
         }
         
     }
@@ -111,22 +149,42 @@ int main()
     int nums2[3] = {2,5,7};
     Lst<int> m2(3,nums2);
     Lst<int> m(5, nums);
-
+    cout << "list m: ";
     m.print_lst();
+    cout << "list m2: ";
     m2.print_lst();
 
-    cout<<m.index(5)<<endl;
+    cout<<"m.index 5 = "<<m.index(5)<<endl;
+
+    m.pop(2);
+    cout<<"m.pop(2): ";
+    m.print_lst();
+
+    m.remove(4);
+    cout << "m.remove(4): ";
+    m.print_lst();
 
     m.insert(2,19);
+    cout<<"m.inset(2,19): ";
     m.print_lst();
 
     m.append(6);
+    cout<<"m.append(6): ";
     m.print_lst();
 
     m.extend(m2);
+    cout << "m.extend(m2): ";
     m.print_lst();
 
-    cout << m.count(6)<<endl;
+    m.reverse();
+    cout << "reverse of m: ";
+    m.print_lst();
+
+    m.sort();
+    cout << "sorted m: ";
+    m.print_lst();
+
+    cout << "m.count(6): " <<m.count(6)<<endl;
 
     m.clear();
     m.print_lst();
