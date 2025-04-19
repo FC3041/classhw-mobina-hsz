@@ -119,6 +119,12 @@ public:
         
     }
 
+    ~Lst(){
+        delete[] m_lst;
+        m_capacity = 0;
+        m_len = 0;
+    }
+
 private:
     void resize(int newlen)
     {

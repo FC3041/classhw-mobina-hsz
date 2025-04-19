@@ -60,6 +60,12 @@ class Str{
         return m_len;
     }
 
+    ~Str(){
+        delete[] m_values;
+        m_capacity = 0;
+        m_len = 0;
+    }
+
 };
 
 int main(){

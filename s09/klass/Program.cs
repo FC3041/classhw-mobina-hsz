@@ -31,14 +31,14 @@ public class Student{
 
     public static Student Parse(string str){
         string[] tokens = str.Split(',');
-        //name = tokens[0] -> it is wrong cause this method is static and there is no varuiable!
+        //name = tokens[0] -> it is wrong cause this method is static and there is no varuable!
         var name = tokens[0];
         var stdid = int.Parse(tokens[1]); //var stdid = tokens[1] wont work cuz it would be str by the str.split
     }
 
     public override bool Equals(object obj){
         Student other = (Student) obj;
-        //if the obj was not student it would get to the error
+        //if the obj was not student it would get an error
 
         if(obj is Student){
             Student other = obj as Student; //as is like cast but it wouldnt error and return null

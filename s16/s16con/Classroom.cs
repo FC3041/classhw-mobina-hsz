@@ -3,7 +3,7 @@ namespace s16con;
 class Teacher{}
 class Classroom{
     public string Name;
-    // public Student[] Students;?????
+    public Student[] Students;
     public Teacher Teacher;
 }
 

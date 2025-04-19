@@ -34,12 +34,13 @@ class Lst{
         {
             values [i-1] = values[i];
         }
+        len --;
     }
 
     void clear(){
         for (int i = 0; i < len; i++)
         {
-            /* code */
+            
         }
         
     }

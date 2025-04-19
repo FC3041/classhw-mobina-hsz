@@ -1,6 +1,6 @@
+//hw: complete the vector you can use other dimensions too and write tests for it
 
-
-using System.Net;
+using System;
 
 class Vector : IComparable<Vector> , IEquatable{
     // class Vector<T> : IComparable<Vector> , IEquatable<Vector<T>>{
@@ -24,7 +24,7 @@ class Vector : IComparable<Vector> , IEquatable{
         return false;
     }
 
-    int IComparable<vector>.CompareTo(Vector v) => this.Magnitude.CompareTo(v.Magnitude); // i should link the test and program so it can read it
+    int IComparable<Vector>.CompareTo(Vector v) => this.Magnitude.CompareTo(v.Magnitude); // i should link the test and program so it can read it
 
     public static Vector Parse(string s){
         string[] tokens = s.Split(',');
@@ -32,4 +32,8 @@ class Vector : IComparable<Vector> , IEquatable{
     }
     //^ this the symbol for XOR
     //HashCode is a Code that if for two objects will be equal then the two objects are equal.
+}
+
+internal interface IEquatable
+{
 }

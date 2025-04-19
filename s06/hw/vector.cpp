@@ -42,6 +42,12 @@ class Vector{
         resize(0);
     }
 
+    ~Vector(){
+        delete[] m_nums;
+        m_capacity = 0;
+        m_size = 0;
+    }
+
 
     private:
     void resize(int size){
