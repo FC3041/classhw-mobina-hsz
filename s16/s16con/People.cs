@@ -40,11 +40,14 @@ class Citizen{
     }
 
     class Teacher: Citizen{
-        public Teacher(string f , string l , int id , bool m)
+        public long Salary{get ; set ;}
+        public int Rating {get ; set;}
+        public bool Employed {get; set;}
+        public Teacher(string f , string l , int id , bool m, long s , int r , bool e)
         :base(f,l, id,m){
-            //SALARY
-            //RATING
-            //EMPLOYED
+            this.Salary = s;
+            this.Rating = r;
+            this.Employed = e;
         }
     }
     //crtl + p / reload 
