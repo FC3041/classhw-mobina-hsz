@@ -28,6 +28,35 @@ public static class EXT{  //extention class
         }
         return result;
     }
+
+    public static string Coder_Sezar(this string s){
+        char[] result = s.ToCharArray();
+        for (int i = 0; i < s.Length; i++)
+        {
+            char start;
+            if(char.IsUpper(s[i])){
+                start = 'A';
+            }
+            else start = 'a';
+
+            result[i] = (char) ((s[i] - start + 3)%26 +start);
+        }
+        return new string(result);
+    }
+
+    public static string Decoder_Sezar(this string s){
+        char[] result = s.ToCharArray();
+        for (int i = 0; i < s.Length; i++)
+        {
+                        char start;
+            if(char.IsUpper(s[i])){
+                start = 'A';
+            }
+            else start = 'a';
+            result[i] = (char)((result[i]- start + 26 -3 )%26 + start);
+        }
+        return new string(result);
+    }
 }
 
 //"HW" : Coder and Decoder SEZAR for strings

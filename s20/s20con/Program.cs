@@ -23,6 +23,12 @@ class Program
         var t3 = Tuple.Create<string,int>("Mobina" , 19);
         //using "Create" instead of "New"
 
+        string name = "hellz";
+
+        System.Console.WriteLine(name.Coder_Sezar());
+
+        System.Console.WriteLine("khooc".Decoder_Sezar());
+
     }
     static void Main2(string[] args)
     {
