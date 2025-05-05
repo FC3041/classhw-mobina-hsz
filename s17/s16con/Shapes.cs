@@ -25,5 +25,5 @@ abstract class Shape{
     }
 
     //CLONES
-    //usually we make a clone in classes for changes so if it changes the other methods would not change in the first made class
+    //usually we make a clone in classes for changes so if it changes, the other methods would not change in the first made class
 }

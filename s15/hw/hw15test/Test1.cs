@@ -1,4 +1,4 @@
-﻿namespace s15.Test;
+﻿namespace hw15test;
 
 [TestClass]
 public sealed class Test1
