@@ -4,8 +4,7 @@ namespace s21;
 
 class Program
 {
-
-    static void Main(string[] args){
+       static void Main(string[] args){
         var data =  File.ReadAllLines("children-per-woman-UN.csv")
                 .Skip(1)
                 .Select(line =>{
@@ -51,11 +50,11 @@ class Program
             .Select(g => {
                 return (country: g.Key , rate:g.Average(t => t.rate));
 
-                //the value that the groups are made base on that named "key"
+                //the value that the groups are made base on named "key"
                 //each group is made by several tuples(cause we use the select to return each line in tuple)
             })
 
-            //.Where(t=> (t.year>2012) && (t.rate>3))//t stands for tuple
+            .Where(t=> (t.year>2012) && (t.rate>3))//t stands for tuple
 
             .OrderBy(t=>t.rate) //it will get tuples(t) and order them by their rates  
 
